@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "ngDashboard.js",
+  "sourceRoot": "",
+  "sources": [
+    "ngDashboard.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;AAAA,EAAA,OAAO,CAAC,MAAR,CAAe,aAAf,EAA8B,EAA9B,CAAA,CAAA;AAAA"
+}

@@ -8,17 +8,20 @@
     <script src="../../bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
     <link  href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
-    <script src="../../src/ngDashboard.js"></script>
-    <script src="../../src/directives/dashboard-widgets.js"></script>
+    <link  href="example.css" rel="stylesheet" type="text/css" />
 
-    <script src="example01.js"></script>
+    <script src="../../src/ngDashboard.js"></script>
+    <script src="../../src/directives/dashboard.js"></script>
+    <script src="../../src/directives/widget.js"></script>
+
+    <script src="../../src/directives/counter.js"></script>
+
+    <script src="example.js"></script>
 
 </head>
-<body>
-    <div ng-app="example01">
-        <div ng-controller="ctrl1">
-            <dashboard-widget widget-list="widgetList"></dashboard-widget>
-        </div>
+<body ng-app="example01">
+    <div ng-controller="ctrl1 as c1" class="row">
+        <dashboard widget-list="c1.widgetList"></dashboard>
     </div>
 </body>
 </html>
