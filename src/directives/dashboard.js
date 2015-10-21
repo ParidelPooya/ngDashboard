@@ -5,18 +5,34 @@
       return {
         scope: {
           widgetList: '=',
-          removeButton: '='
+          removeButton: '=',
+          resizeButton: '='
         },
         replace: false,
         restrict: 'EA',
-        template: "<div ng-repeat='data in widgetList' class='{{prepareWidth(data)}} widget-container'> <em ng-show='removeButton' class='widget-btn glyphicon glyphicon-remove' ng-click='removeWidget($index)'></em> <div widget remove-button='removeButton' data='data'></div> </div>",
+        template: "<div ng-repeat='(wpos,data) in widgetList' class='{{prepareWidth(data)}} widget-container'> <span class='widget-btn'> <em ng-show='resizeButton' class='glyphicon glyphicon-transfer' ng-click='resizeWidget(data)'></em> <em ng-show='removeButton' class='glyphicon glyphicon-remove' ng-click='removeWidget(wpos)'></em> </span> <div widget remove-button='removeButton' data='data'></div> </div>",
         controller: function($scope) {},
         link: function($scope, elm, attr) {
           $scope.prepareWidth = function(data) {
             return 'col-md-' + data.Size[0];
           };
-          return $scope.removeWidget = function(pos) {
+          $scope.removeWidget = function(pos) {
             $scope.widgetList.splice(pos, 1);
+          };
+          return $scope.resizeWidget = function(data) {
+            var currentSize, i, len, nextSize, pos, ref, size;
+            currentSize = 0;
+            ref = data.SupportedSize;
+            for (pos = i = 0, len = ref.length; i < len; pos = ++i) {
+              size = ref[pos];
+              if (size[0] === data.Size[0] && size[1] === data.Size[1]) {
+                currentSize = pos;
+                break;
+              }
+            }
+            nextSize = data.SupportedSize[(pos + 1) % data.SupportedSize.length];
+            data.Size[0] = nextSize[0];
+            return data.Size[1] = nextSize[1];
           };
         }
       };

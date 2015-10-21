@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "multiSizeHello.js",
+  "sourceRoot": "",
+  "sources": [
+    "multiSizeHello.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;AAAA,EAAA,OAAO,CAAC,MAAR,CAAe,aAAf,CAA6B,CAAC,SAA9B,CAAwC,gBAAxC,EAAyD;IAAC,UAAD,EAAa,SAAC,QAAD,GAAA;aACpE;AAAA,QAAA,QAAA,EAAU,IAAV;AAAA,QACA,KAAA,EACE;AAAA,UAAA,IAAA,EAAM,GAAN;SAFF;AAAA,QAIA,QAAA,EAAS,mWAJT;AAAA,QAsBA,IAAA,EAAM,SAAC,KAAD,EAAQ,GAAR,EAAa,IAAb,GAAA,CAtBN;QADoE;IAAA,CAAb;GAAzD,CAAA,CAAA;AAAA"
+}

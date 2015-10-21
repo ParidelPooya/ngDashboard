@@ -9,10 +9,10 @@
       this.widgetList = [
         {
           Directive:"hello",
-          Title:'First Directive',
+          Title:'Directive Sample',
           Desc: 'View Battery Level',
           Icon: 'icon-car',
-          Size:[12,2],
+          Size:[4,2],
           Color:'#1797be',
           BGColor:'#42B6E9',
           SupportedSize:[[1,1],[2,2]],

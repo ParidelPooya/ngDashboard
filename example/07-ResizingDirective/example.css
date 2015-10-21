@@ -1,0 +1,38 @@
+body{
+    margin:10px
+}
+
+
+.wid-height-1{
+    height: 100px;
+}
+
+.wid-height-2{
+    height: 200px;
+}
+
+.wid-height-3{
+    height: 300px;
+}
+
+.wid-height-4{
+    height: 400px;
+}
+
+.wid-height-5{
+    height: 500px;
+}
+
+.wid-height-6{
+    height: 600px;
+}
+
+.widget-btn{
+    position: absolute;
+    right:25px;
+    top:10px;
+}
+
+.widget-container{
+    position: relative;
+}

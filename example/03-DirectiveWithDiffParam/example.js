@@ -4,7 +4,7 @@
 
   example = angular.module('example', ['ngDashboard']);
 
-  example01.controller('ctrl1', [
+  example.controller('ctrl1', [
     '$scope', function($scope) {
       this.widgetList = [
         {

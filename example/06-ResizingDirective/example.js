@@ -3,7 +3,7 @@
 (function() {
   var example;
 
-  example = angular.module('example', ['ui.bootstrap','ngDashboard']);
+  example = angular.module('example', ['ngDashboard']);
 
   example.controller('ctrl1', [
     '$scope', function($scope) {
@@ -16,10 +16,10 @@
               Title:'New Counter',
               Desc: 'View Battery Level',
               Icon: 'icon-car',
-              Size:[4,2],
+              Size:[2,2],
               Color:'#1797be',
               BGColor:'#42B6E9',
-              SupportedSize:[[1,1],[2,2]],
+              SupportedSize:[[2,2],[4,2],[2,4],[4,4]],
               Data:{
                 CountFrom:1,
                 Add:3,
