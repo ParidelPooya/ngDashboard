@@ -6,20 +6,41 @@
         scope: {
           widgetList: '=',
           removeButton: '=',
-          resizeButton: '='
+          resizeButton: '=',
+          dragDrop: '='
         },
         replace: false,
         restrict: 'EA',
-        template: "<div ng-repeat='(wpos,data) in widgetList' class='{{prepareWidth(data)}} widget-container'> <span class='widget-btn'> <em ng-show='resizeButton' class='glyphicon glyphicon-transfer' ng-click='resizeWidget(data)'></em> <em ng-show='removeButton' class='glyphicon glyphicon-remove' ng-click='removeWidget(wpos)'></em> </span> <div widget remove-button='removeButton' data='data'></div> </div>",
+
+        /*
+        template:"<div ng-repeat='(wpos,data) in widgetList' class='{{prepareWidth(data)}} widget-container'>
+            <span class='widget-btn'>
+        
+              <em ng-show='resizeButton' class='glyphicon glyphicon-transfer' ng-click='resizeWidget(data)'></em>
+              <em ng-show='removeButton' class='glyphicon glyphicon-remove' ng-click='removeWidget(wpos)'></em>
+        
+            </span>
+            <div widget remove-button='removeButton' data='data'></div>
+          </div>"
+         */
         controller: function($scope) {},
         link: function($scope, elm, attr) {
+          var template;
+          template = "";
+          if ($scope.dragDrop) {
+            template = "<div ng-repeat='(wpos,data) in widgetList' class='{{prepareWidth(data)}} widget-container' lr-drag-src=\"wPlace\" lr-drop-target=\"wPlace\" > <span class='widget-btn'> <em ng-show='resizeButton' class='glyphicon glyphicon-transfer' ng-click='resizeWidget(data)'></em> <em ng-show='removeButton' class='glyphicon glyphicon-remove' ng-click='removeWidget(wpos)'></em> </span> <div widget remove-button='removeButton' data='data'></div> </div>";
+          } else {
+            template = "<div ng-repeat='(wpos,data) in widgetList' class='{{prepareWidth(data)}} widget-container'> <span class='widget-btn'> <em ng-show='resizeButton' class='glyphicon glyphicon-transfer' ng-click='resizeWidget(data)'></em> <em ng-show='removeButton' class='glyphicon glyphicon-remove' ng-click='removeWidget(wpos)'></em> </span> <div widget remove-button='removeButton' data='data'></div> </div>";
+          }
+          elm.html(template);
+          $compile(elm.contents())($scope);
           $scope.prepareWidth = function(data) {
             return 'col-md-' + data.Size[0];
           };
           $scope.removeWidget = function(pos) {
             $scope.widgetList.splice(pos, 1);
           };
-          return $scope.resizeWidget = function(data) {
+          $scope.resizeWidget = function(data) {
             var currentSize, i, len, nextSize, pos, ref, size;
             currentSize = 0;
             ref = data.SupportedSize;
