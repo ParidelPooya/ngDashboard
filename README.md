@@ -41,16 +41,16 @@ Add dashboard directive to the place you want all dynamic directive added and pa
 
 ### Example
 
-Available examples in "example" folder:
-    * 01-SimpleUsage: Very Simple Example with only in directive to load.
-    * 02-MultipleDirective: Load more directives.
-    * 03-DirectiveWithDiffParam: calling one directive twice with different settings.
-    * 04-AddingDirective: Simple example to show how to add new directive to the page.
-    * 05-RemovingDirective: There is parameter for ngDashboard to show remove button for directives.
-    * 06-ResizingDirective: There is parameter for ngDashboard to enable directives resizing.
-    * 07-ShowMoreData: Directives can detect current size and show more/ different data based on size.
-    * 08-NestedWidgets: Dashboard inside another dashboard.
-    * 09-DragNDrop: Drag and Drop is easily achievable by using other module.
+* Available examples in "example" folder:
+  * 01-SimpleUsage: Very Simple Example with only in directive to load.
+  * 02-MultipleDirective: Load more directives.
+  * 03-DirectiveWithDiffParam: calling one directive twice with different settings.
+  * 04-AddingDirective: Simple example to show how to add new directive to the page.
+  * 05-RemovingDirective: There is parameter for ngDashboard to show remove button for directives.
+  * 06-ResizingDirective: There is parameter for ngDashboard to enable directives resizing.
+  * 07-ShowMoreData: Directives can detect current size and show more/ different data based on size.
+  * 08-NestedWidgets: Dashboard inside another dashboard.
+  * 09-DragNDrop: Drag and Drop is easily achievable by using other module.
 
 
 ##Licence
