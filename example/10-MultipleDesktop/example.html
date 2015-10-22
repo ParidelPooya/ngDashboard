@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script src="../../bower_components/angular/angular.min.js"></script>
+    <script src="../../bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <link  href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    <link  href="example.css" rel="stylesheet" type="text/css" />
+
+    <script src="../../src/ngDashboard.js"></script>
+    <script src="../../src/directives/dashboard.js"></script>
+    <script src="../../src/directives/widget.js"></script>
+
+    <script src="../../src/directives/hello.js"></script>
+    <script src="../../src/directives/counter.js"></script>
+
+    <script src="example.js"></script>
+
+</head>
+<body ng-app="example">
+    <div ng-controller="ctrl1 as c1" class="row">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <button class="btn btn-info" ng-click="c1.NextScreen()">
+                    <em class='widget-btn glyphicon glyphicon-arrow-right'></em>
+                    Next Screen
+                </button>
+            </div>
+            <hr/>
+        </div>
+
+        <dashboard widget-list="c1.widgetList"></dashboard>
+    </div>
+</body>
+</html>
+
+
+
+
+
