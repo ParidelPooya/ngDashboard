@@ -15,24 +15,42 @@ angular.module('myApp',['ngDashboard']);
 Create array of directive you want to add:
 
 ```javascript
-[
+widgetList=[
     {
-      Directive:"hello",
-      Title:'Directive Sample',
-      Desc: 'View Battery Level',
-      Icon: 'icon-car',
-      Size:[4,2],
-      Color:'#1797be',
-      BGColor:'#42B6E9',
-      SupportedSize:[[1,1],[2,2]],
-      Data:{},
-      SelBGColor:'#484848',
-      ClassName:'widget'
+      Directive:"your-directive-name",
+      Title:'Directive Title',
+      Desc: 'Directive Description',
+      Icon: 'Your Directive Icon',
+      Size:[width,height],
+      SupportedSize:[[width1,height1],[width2,height2],...,[widthN,heightN]],
+      Data:{you can pass any object to your directive},
+      ClassName:'CSS class name'
     },
     // Next Directives
 ];
 
 ```
+
+### Add directive
+
+Add dashboard directive to the place you want all dynamic directive added and pass your created array to it:
+
+```html
+<dashboard widget-list="widgetList"></dashboard>
+```
+
+### Example
+
+Available examples in "example" folder:
+    * 01-SimpleUsage: Very Simple Example with only in directive to load.
+    * 02-MultipleDirective: Load more directives.
+    * 03-DirectiveWithDiffParam: calling one directive twice with different settings.
+    * 04-AddingDirective: Simple example to show how to add new directive to the page.
+    * 05-RemovingDirective: There is parameter for ngDashboard to show remove button for directives.
+    * 06-ResizingDirective: There is parameter for ngDashboard to enable directives resizing.
+    * 07-ShowMoreData: Directives can detect current size and show more/ different data based on size.
+    * 08-NestedWidgets: Dashboard inside another dashboard.
+    * 09-DragNDrop: Drag and Drop is easily achievable by using other module.
 
 
 ##Licence
