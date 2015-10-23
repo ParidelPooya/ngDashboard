@@ -6,6 +6,12 @@ It is about 90 lines of code and has no dependency to third party library.
 
 ## getting started
 
+
+### Build ###
+
+  bower install
+
+
 add the module to your application using standard angularjs module management
 ```javascript
 angular.module('myApp',['ngDashboard']);
