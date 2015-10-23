@@ -5,7 +5,7 @@
 It is about 90 lines of code and has no dependency to third party library.
 
 ## Build ##
-    use bower to install needed component
+use bower to install needed component
 
 ```
 bower install
