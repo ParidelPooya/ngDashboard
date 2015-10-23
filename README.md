@@ -4,12 +4,14 @@
 
 It is about 90 lines of code and has no dependency to third party library.
 
+## Build ##
+    use bower to install needed component
+
+```
+bower install
+```
+
 ## getting started
-
-
-### Build ###
-
-  bower install
 
 
 add the module to your application using standard angularjs module management
